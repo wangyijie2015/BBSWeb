@@ -1,9 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿
 using MyBBSWebApi.DAL.Core;
 using MyBBSWebApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace MyBBSWebApi.DAL
 {

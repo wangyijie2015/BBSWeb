@@ -1,7 +1,7 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +11,7 @@ namespace MyBBSWebApi.DAL.Core
     public class SqlHelper
     {
         public static string ConnectionString { get; set; } = "server=.;database=MyBBS;uid=sa;pwd=123456";
+  
 
         public static DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
         {
