@@ -27,6 +27,8 @@ namespace MyBBSWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //ºó¶ËÅäÖÃ¿çÓò
+            services.AddCors(c=>c.AddPolicy("any",p=>p.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod()));
             services.AddSingleton<IUsersBLL,UsersBLL>(); //ÒÀÀµ×¢Èë IUsersBLL
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -48,6 +50,8 @@ namespace MyBBSWebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors();//Ê¹ÓÃ¿çÓò
 
             app.UseEndpoints(endpoints =>
             {

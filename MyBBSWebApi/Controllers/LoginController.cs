@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyBBSWebApi.BLL.Interfaces;
 using MyBBSWebApi.Models;
@@ -10,6 +11,7 @@ namespace MyBBSWebApi.Controllers
     [Route("[controller]/[action]")]
     //[Route("[controller]")]  //restful 风格
     [ApiController]
+    [EnableCors("any")]  //为Login 控制器 配置允许跨域
     public class LoginController : ControllerBase
     {
         private readonly IUsersBLL _userBll;
