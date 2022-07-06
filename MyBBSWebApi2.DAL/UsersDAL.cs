@@ -10,13 +10,22 @@ namespace MyBBSWebApi.DAL
 {
     public class UsersDAL
     {
-
+        /// <summary>
+        /// 查询全部  Users
+        /// </summary>
+        /// <returns></returns>
         public List<Users> GetAll()
         {
             DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users");
             List<Users> userList = ToModelList(res);
             return userList;
         }
+        /// <summary>
+        /// 通过 userNo 和 password 获取 user 
+        /// </summary>
+        /// <param name="userNo"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public List<Users> GetUserByUserNoAndPassword(string userNo, string password)
         {
             DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo=@UserNo AND Password=@Password",
@@ -27,6 +36,27 @@ namespace MyBBSWebApi.DAL
             List<Users> userList = ToModelList(res);
             return userList;
         }
+        /// <summary>
+        ///  通过 userNo 和 AutoLoginTag（自动登录标识） 获取 user 
+        /// </summary>
+        /// <param name="userNo"></param>
+        /// <param name="autoLoginTag"></param>
+        /// <returns></returns>
+        public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
+        {
+            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo=@UserNo AND AutoLoginTag=@AutoLoginTag",
+                new SqlParameter("@UserNo", userNo),
+                new SqlParameter("@AutoLoginTag", autoLoginTag)
+                );
+
+            List<Users> userList = ToModelList(res);
+            return userList;
+        }
+        /// <summary>
+        /// 通过 Id 获取 user
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Users GetUserById(int id)
         {
             DataRow row = null;
@@ -39,6 +69,11 @@ namespace MyBBSWebApi.DAL
             Users user = ToModel(row);
             return user;
         }
+        /// <summary>
+        /// 通过 Token 获取 user
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         public Users GetUserByToken(string token)
         {
             DataRow row = null;
@@ -51,6 +86,7 @@ namespace MyBBSWebApi.DAL
             Users user = ToModel(row);
             return user;
         }
+       
         public int AddUser(string userNo, string userName, int userLevel, string password)
         {
             return SqlHelper.ExecuteNonQuery(
@@ -60,8 +96,19 @@ namespace MyBBSWebApi.DAL
                   new SqlParameter("@UserLevel", userLevel),
                   new SqlParameter("@Password", password));
         }
-
-        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token)
+        /// <summary>
+        /// 更新 user
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="userNo"></param>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="userLevel"></param>
+        /// <param name="token"></param>
+        /// <param name="autoLoginTag"></param>
+        /// <param name="autoLoginLimitTime"></param>
+        /// <returns></returns>
+        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token, Guid? autoLoginTag, DateTime? autoLoginLimitTime)
         {
             DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users Where Id = @Id", new SqlParameter("@Id", id));
             int rowCount = 0;
@@ -70,24 +117,33 @@ namespace MyBBSWebApi.DAL
                 DataRow row = res.Rows[0];
                 Users user = new Users();
                 user.Id = (int)row["Id"];
-                user.UserNo = userNo ?? row["UserNo"].ToString();
+                user.UserNo = userNo ?? row["UserNo"].ToString();//如果userNo 为空 就返回 row["UserNo"].ToString() 否则返回本身
                 user.UserName = userName ?? row["UserName"].ToString();
                 user.UserLevel = userLevel ?? (int)row["UserLevel"];
                 user.Password = password ?? row["Password"].ToString();
-                //user.Token = token ?? new Guid();
+                user.Token = token ?? new Guid();// 如果传入的token 为空 就new Guid() 否则 就要 token本身
+                user.AutoLoginTag = autoLoginTag ?? new Guid();
+                user.AutoLoginLimitTime = autoLoginLimitTime;
                 rowCount = SqlHelper.ExecuteNonQuery(
-             "UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel=@UserLevel, Password = @Password, Token = @Token WHERE Id = @Id",
+             "UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel=@UserLevel, Password = @Password, Token = @Token, AutoLoginTag = @AutoLoginTag , AutoLoginLimitTime = @AutoLoginLimitTime WHERE Id = @Id",
              new SqlParameter("@UserNo", user.UserNo),
              new SqlParameter("@UserName", user.UserName),
              new SqlParameter("@UserLevel", user.UserLevel),
              new SqlParameter("@Password", user.Password),
-            // new SqlParameter("@Token", user.Token),
+             new SqlParameter("@Token", user.Token),
+             new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+             new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime),
              new SqlParameter("@Id", user.Id)
              );
             }
             return rowCount;
         }
 
+        /// <summary>
+        /// 通过id 删除一个User 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public int RemoveUser(int id)
         {
 
@@ -115,6 +171,9 @@ namespace MyBBSWebApi.DAL
             user.UserLevel = (int)row["UserLevel"];
             user.Password = row["Password"].ToString();
             user.IsDelete = (bool)row["IsDelete"];
+            user.Token = (Guid)row["Token"];
+            user.AutoLoginTag = (Guid)row["AutoLoginTag"];
+            user.AutoLoginLimitTime = (DateTime)row["AutoLoginLimitTime"];
             return user;
         }
     
