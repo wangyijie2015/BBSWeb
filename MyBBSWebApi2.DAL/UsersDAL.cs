@@ -86,15 +86,20 @@ namespace MyBBSWebApi.DAL
             Users user = ToModel(row);
             return user;
         }
-       
-        public int AddUser(string userNo, string userName, int userLevel, string password)
+        /// <summary>
+        /// 添加一个 User
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public int AddUser(Users user)
         {
             return SqlHelper.ExecuteNonQuery(
-                  "INSERT INTO Users(UserNo,UserName,UserLevel,Password) VALUES(@UserNo,@UserName,@UserLevel,@Password)",
-                  new SqlParameter("@UserNo", userNo),
-                  new SqlParameter("@UserName", userName),
-                  new SqlParameter("@UserLevel", userLevel),
-                  new SqlParameter("@Password", password));
+                  "INSERT INTO Users(UserNo,UserName,UserLevel,Password,IsDelete) VALUES(@UserNo,@UserName,@UserLevel,@Password,@IsDelete)",
+                  new SqlParameter("@UserNo", user.UserNo),
+                  new SqlParameter("@UserName", user.UserName),
+                  new SqlParameter("@UserLevel", user.UserLevel),
+                  new SqlParameter("@Password", user.Password),
+                  new SqlParameter("@IsDelete", user.IsDelete));
         }
         /// <summary>
         /// 更新 user
