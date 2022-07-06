@@ -6,11 +6,12 @@ namespace MyBBSWebApi.BLL.Interfaces
 {
     public interface IUsersBLL
     {
-        string AddUser(string userNo, string userName, int userLevel, string password);
+        string AddUser(Users user);
         Users CheakLogin(string userNo, string password);
-        List<Users> GetAll();
         Users GetUserByToken(string token);
+        List<Users> GetAll();
         string RemoveUser(int id);
-        string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token);
+        string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token, Guid? autoLoginTag, DateTime? autoLoginLimitTime);
+       
     }
 }
