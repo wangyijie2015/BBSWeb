@@ -8,8 +8,8 @@ using System.Collections.Generic;
 
 namespace MyBBSWebApi.Controllers
 {
-    [Route("[controller]/[action]")]
-    //[Route("[controller]")]  //restful 风格
+    //[Route("[controller]/[action]")]
+    [Route("[controller]")]  //restful 风格
     [ApiController]
     [EnableCors("any")]  //为Login 控制器 配置允许跨域
     public class LoginController : ControllerBase
@@ -34,16 +34,16 @@ namespace MyBBSWebApi.Controllers
             return user;
         }
         [HttpPost]
-        public string Insert(string userNo, string userName, int userLevel, string password)
+        public string Insert(Users user)
         {
 
-            return _userBll.AddUser(userNo, userName, userLevel, password);
+            return _userBll.AddUser(user);
         }
         [HttpPut]
         public string Update(int id, string userNo, string userName, string password, int? userLevel, Guid token)
         {
 
-            return _userBll.UpdateUser(id, userNo, userName, password, userLevel, token);
+            return _userBll.UpdateUser(id, userNo, userName, password, userLevel, token, null, null);
         }
         [HttpDelete]
         public string Remove(int id)

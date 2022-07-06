@@ -1,4 +1,5 @@
 ﻿using MyBBSWebApi.BLL.Interfaces;
+using MyBBSWebApi.Common;
 using MyBBSWebApi.DAL;
 using MyBBSWebApi.Models;
 using System;
