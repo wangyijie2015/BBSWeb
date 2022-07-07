@@ -59,5 +59,8 @@ namespace MyBBSWebApi.DAL.Core
         {
             return value == DBNull.Value ? null : value;
         }
+
+    
+
     }
 }

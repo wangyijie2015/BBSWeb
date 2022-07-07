@@ -170,19 +170,17 @@ namespace MyBBSWebApi.DAL
         private Users ToModel(DataRow row)
         {
             Users user = new Users();
-            user.Id = (int)row["Id"];
-            user.UserNo = row["UserNo"].ToString();
-            user.UserName = row["UserName"].ToString();
-            user.UserLevel = (int)row["UserLevel"];
-            user.Password = row["Password"].ToString();
-            user.IsDelete = (bool)row["IsDelete"];
-            user.Token = (Guid)row["Token"];
-            user.AutoLoginTag = (Guid)row["AutoLoginTag"];
-            user.AutoLoginLimitTime = (DateTime)row["AutoLoginLimitTime"];
+            user.Id = (int)SqlHelper.FromDbValue(row["Id"]);
+            user.UserNo = SqlHelper.FromDbValue(row["UserNo"]).ToString();
+            user.UserName = SqlHelper.FromDbValue(row["UserName"]).ToString();
+            user.UserLevel = (int)SqlHelper.FromDbValue(row["UserLevel"]);
+            user.Password = SqlHelper.FromDbValue(row["Password"]).ToString();
+            user.IsDelete = (bool)SqlHelper.FromDbValue(row["IsDelete"]);
+            user.Token = (Guid?)SqlHelper.FromDbValue(row["Token"]);
+            user.AutoLoginTag = (Guid?)SqlHelper.FromDbValue(row["AutoLoginTag"]);
+            user.AutoLoginLimitTime = (DateTime?)SqlHelper.FromDbValue(row["AutoLoginLimitTime"]);
             return user;
         }
-    
-
-
-}
+   
+    }
 }

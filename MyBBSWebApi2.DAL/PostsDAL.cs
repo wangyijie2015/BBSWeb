@@ -4,9 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Configuration;
-using Microsoft.Data.SqlClient;
 using MyBBSWebApi.Model;
 using MyBBSWebApi.DAL.Core;
+using System.Data.SqlClient;
 
 namespace  MyBBSWebApi.DAL
 {

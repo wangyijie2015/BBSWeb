@@ -43,13 +43,13 @@ namespace MyBBSWebApi.BLL
                 }
                 else
                 {
-                    // 不需要生成 token 
+                    // 不需要生成 AutoLoginTag 
                     return GetLoginResult(userlist, false);
                 }
             }
             else
             {
-                // 需要生成token
+                // 需要生成AutoLoginTag
                 return GetLoginResult(userlist, true);
             }
         }
