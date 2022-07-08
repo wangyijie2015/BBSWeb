@@ -21,7 +21,7 @@ namespace MyBBSWebApi.BLL
             return userDal.GetAll().FindAll(m => !m.IsDelete);
         }
         /// <summary>
-        /// 校验登录（登录的核心逻辑）
+        /// 校验登录（登录的核心逻辑）Token每次登录都必须生成，保证唯一性
         /// </summary>
         /// <param name="userNo"></param>
         /// <param name="password"></param>
@@ -43,13 +43,13 @@ namespace MyBBSWebApi.BLL
                 }
                 else
                 {
-                    // 不需要生成 AutoLoginTag 
+                    //生成新的Token 不需要生成 AutoLoginTag 
                     return GetLoginResult(userlist, false);
                 }
             }
             else
             {
-                // 需要生成AutoLoginTag
+                //生成新的Token 需要生成 AutoLoginTag
                 return GetLoginResult(userlist, true);
             }
         }
