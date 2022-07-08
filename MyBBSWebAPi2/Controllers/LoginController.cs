@@ -30,6 +30,9 @@ namespace MyBBSWebApi.Controllers
         [HttpGet("{userNo}/{password}")]
         public Users GetLoginRes(string userNo, string password)
         {
+            //注意，第一次登录时，这里前端传过来的密码 必须是 加密过的
+            //（否则 运行 userDal.GetUserByUserNoAndAutoLoginTag(userNo, password); 会报错，
+            // 因为AutoLoginTag第一次还没有生成guid，去数据库查询时会报错）
             Users user = _userBll.CheakLogin(userNo, password);
             return user;
         }
