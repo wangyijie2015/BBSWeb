@@ -167,6 +167,11 @@ namespace MyBBSWebApi.DAL
             }
             return userList;
         }
+        /// <summary>
+        /// 必须使用  FromDbValue ，否则使用sql 语句报错
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
         private Users ToModel(DataRow row)
         {
             Users user = new Users();
