@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 //∫Û∂À≈‰÷√øÁ”Ú
 builder.Services.AddCors(c => c.AddPolicy("any", p => p.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod()));
 builder.Services.AddSingleton<IUsersBLL, UsersBLL>(); //“¿¿µ◊¢»Î IUsersBLL
+builder.Services.AddSingleton<IPostsBLL, PostsBLL>(); //“¿¿µ◊¢»Î IPostsBLL
 // Add services to the container.
 
 builder.Services.AddControllers();
