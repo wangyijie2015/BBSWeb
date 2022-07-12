@@ -36,6 +36,10 @@ namespace MyBBSWebApi.BLL
                 userlist = userDal.GetUserByUserNoAndAutoLoginTag(userNo, password);
                 // 校验自动登录 时间是否失效
                 // 如果 数据库中的时间 > 当前时间 表示 可用
+                if (userlist==null)
+                {
+                    return default; //解决用户输入密码错误的情况下，程序出现的错误（2022.07.12）
+                }
                 userlist = userlist.FindAll(m => m.AutoLoginLimitTime > DateTime.Now);
                 if (userlist.Count <= 0)
                 {

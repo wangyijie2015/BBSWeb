@@ -44,13 +44,22 @@ namespace MyBBSWebApi.DAL
         /// <returns></returns>
         public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
         {
-            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo=@UserNo AND AutoLoginTag=@AutoLoginTag",
+            try ///解决用户输入密码错误的情况下，程序出现的错误（2022.07.12）
+            {
+                DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo=@UserNo AND AutoLoginTag=@AutoLoginTag",
                 new SqlParameter("@UserNo", userNo),
                 new SqlParameter("@AutoLoginTag", autoLoginTag)
                 );
 
-            List<Users> userList = ToModelList(res);
-            return userList;
+                List<Users> userList = ToModelList(res);
+                return userList;
+            }
+            catch (Exception)
+            {
+
+                return default;
+            }
+            
         }
         /// <summary>
         /// 通过 Id 获取 user
