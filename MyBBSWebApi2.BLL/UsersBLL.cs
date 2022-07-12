@@ -27,7 +27,7 @@ namespace MyBBSWebApi.BLL
         /// <param name="password"></param>
         /// <returns></returns>
         public Users CheakLogin(string userNo, string password)
-        { 
+        {
             //将前端传入的明文密码 通过MD5 进行加密
             List<Users> userlist = userDal.GetUserByUserNoAndPassword(userNo, password.ToMd5());
             if (userlist.Count <= 0)//数据库中没有找到数据
@@ -99,7 +99,7 @@ namespace MyBBSWebApi.BLL
         /// <returns></returns>
         public string AddUser(Users user)
         {
-            user.IsDelete = false;  
+            user.IsDelete = false;
             int rows = userDal.AddUser(user);
             if (rows > 0)
             {
@@ -134,6 +134,23 @@ namespace MyBBSWebApi.BLL
         {
 
             int rows = userDal.UpdateUser(id, userNo, userName, password, userLevel, token, autoLoginTag, autoLoginLimitTime);
+            if (rows > 0)
+            {
+                return "数据修改成功";
+            }
+            else
+            {
+                return "数据修改失败";
+            }
+        }
+        /// <summary>
+        /// 视图模型的使用
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public string UpdateUserOfUI(Users user)
+        {
+            int rows = userDal.UpdateUserOfUI(user);
             if (rows > 0)
             {
                 return "数据修改成功";

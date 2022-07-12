@@ -145,6 +145,33 @@ namespace MyBBSWebApi.DAL
         }
 
         /// <summary>
+        ///  视图模型 的使用
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public int UpdateUserOfUI(Users user)
+        {
+            DataTable res = SqlHelper.ExecuteTable("SELECT * FROM Users Where Id = @Id", new SqlParameter("@Id", user.Id));
+            int rowCount = 0;
+            if (res.Rows.Count > 0)
+            {
+                DataRow row = res.Rows[0];
+                rowCount = SqlHelper.ExecuteNonQuery(
+             "UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel=@UserLevel, Password = @Password, Token = @Token, AutoLoginTag = @AutoLoginTag , AutoLoginLimitTime = @AutoLoginLimitTime WHERE Id = @Id",
+             new SqlParameter("@UserNo", user.UserNo),
+             new SqlParameter("@UserName", user.UserName),
+             new SqlParameter("@UserLevel", user.UserLevel),
+             new SqlParameter("@Password", user.Password),
+             new SqlParameter("@Token", user.Token),
+             new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+             new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime),
+             new SqlParameter("@Id", user.Id)
+             );
+            }
+            return rowCount;
+        }
+
+        /// <summary>
         /// 通过id 删除一个User 
         /// </summary>
         /// <param name="id"></param>

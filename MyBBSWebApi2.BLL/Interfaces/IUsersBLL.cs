@@ -11,6 +11,7 @@ namespace MyBBSWebApi.BLL.Interfaces
         Users GetUserByToken(string token);
         List<Users> GetAll();
         string RemoveUser(int id);
+        string UpdateUserOfUI(Users user);
         string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token, Guid? autoLoginTag, DateTime? autoLoginLimitTime);
        
     }
