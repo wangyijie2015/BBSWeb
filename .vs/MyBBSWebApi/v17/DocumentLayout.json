@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CShape\\sample\\Code\\BBS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC8EED8F-61DA-45D1-9E1B-045E287D0B2F}|MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2.models\\mybbswebapi.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FC8EED8F-61DA-45D1-9E1B-045E287D0B2F}|MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj|solutionrelative:mybbswebapi2.models\\mybbswebapi.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|solutionrelative:mybbswebapi2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|solutionrelative:mybbswebapi2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|solutionrelative:mybbswebapi2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE66D1A8-681D-4D5A-BD34-87329CEB344A}|MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2.bll\\mybbswebapi.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CE66D1A8-681D-4D5A-BD34-87329CEB344A}|MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj|solutionrelative:mybbswebapi2.bll\\mybbswebapi.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|solutionrelative:mybbswebapi2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|e:\\cshape\\sample\\code\\bbs\\mybbswebapi2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{576C298B-A7AC-451D-8BCF-4EDD27F32A6E}|MyBBSWebAPi2\\MyBBSWebAPi.csproj|solutionrelative:mybbswebapi2\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyBBSWebApi.Models",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj",
+              "RelativeDocumentMoniker": "MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj",
+              "RelativeToolTip": "MyBBSWebApi2.Models\\MyBBSWebApi.Models.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-18T13:55:50.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Microsoft.PackageDependencyResolution.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
+              "ViewState": "AgIAAEwBAAAAAAAAAAArwAkBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-04-18T13:55:26.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MyBBSWebApi.BLL",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj",
+              "RelativeDocumentMoniker": "MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj",
+              "RelativeToolTip": "MyBBSWebApi2.BLL\\MyBBSWebApi.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-18T13:52:17.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "MyBBSWebAPi2\\appsettings.Development.json",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\appsettings.Development.json",
+              "RelativeToolTip": "MyBBSWebAPi2\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T13:51:14.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Program.cs",
+              "RelativeDocumentMoniker": "MyBBSWebAPi2\\Program.cs",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Program.cs",
+              "RelativeToolTip": "MyBBSWebAPi2\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T13:47:48.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\appsettings.json",
+              "RelativeDocumentMoniker": "MyBBSWebAPi2\\appsettings.json",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\appsettings.json",
+              "RelativeToolTip": "MyBBSWebAPi2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T13:47:42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MyBBSWebAPi2\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MyBBSWebAPi2\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T13:42:35.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "MyBBSWebAPi2\\Controllers\\LoginController.cs",
+              "ToolTip": "E:\\CShape\\sample\\Code\\BBS\\MyBBSWebAPi2\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "MyBBSWebAPi2\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T13:42:19.376Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
