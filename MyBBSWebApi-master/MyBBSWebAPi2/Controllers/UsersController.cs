@@ -26,7 +26,6 @@ namespace MyBBSWebAPi.Controllers
                 user.UserName = edit.UserName;
                 if(edit.Password !=null && edit.Password.Trim() !="")
                     user.Password = edit.Password;
-
                 usersBLL.UpdateUserOfUI(user);
                 return true;
             }
