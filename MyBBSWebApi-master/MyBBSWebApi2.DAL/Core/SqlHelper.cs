@@ -10,8 +10,9 @@ namespace MyBBSWebApi.DAL.Core
 {
     public class SqlHelper
     {
-        public static string ConnectionString { get; set; } = "server=.;database=MyBBS;uid=sa;pwd=123456";
-  
+        //public static string ConnectionString { get; set; } = "server=.;database=MyBBS;uid=sa;pwd=123456";
+        public static string ConnectionString { get; set; } = "server=localhost;database=music;uid=root;pwd=byd123123";
+
 
         public static DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
         {
