@@ -56,12 +56,12 @@ namespace MyBBSWebApi.DAL.Core
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static object FromDbValue(object value)
+        public static object? FromDbValue(object value)
         {
             return value == DBNull.Value ? null : value;
         }
 
-    
+
 
     }
 }
